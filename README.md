@@ -1,4 +1,5 @@
 Word Washer (Portfolio)
+
 This program will take in a .tsv file and replace specific words with whatever the user wants.
 
 The user can write in a specific word that they want to replace and then what they want it to be replaced with. Those words will be saved in an array that for this program stored locally.
