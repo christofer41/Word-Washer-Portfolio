@@ -1,0 +1,103 @@
+html, body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  
+}
+body {
+
+  background-image: url("office.jpg");
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+#boxForTheTable {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  cursor: pointer;
+  text-align: left;
+    margin-top: 50px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    min-width: 600px;
+    max-width: 90%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+    text-shadow: 2px 2px 10px #0c0522;
+    background-color: #362F4B;
+    color: #ffffff;
+}
+
+table th, table td {
+    padding: 12px 15px;
+}
+
+table tbody tr {
+    color: rgb(78, 78, 78);
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #362F4B;
+    border-radius: 8px;
+}
+
+table tbody tr:hover {
+    color: #201444;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  background-image: repeating-linear-gradient(#362F4B, #191522);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.733);
+}
+  
+#settings {
+  user-select: none;
+  color: white;
+  min-width: 480px;
+  background-image: repeating-linear-gradient(#f1e2ff4b, #18171aad);
+  background-color: #f1e2ff4b;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.137);
+}
+  
+#settings, #replaceDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+  
+#replaceDiv >* {
+    margin: 5px;
+}
+  
+form >* {
+    margin: 5px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <div id="settings">
+            <form id="theForm" enctype="multipart/form-data">
+                <input onclick="clearBoard()" id="upload" type=file accept=".tsv" name="files[]" size=30>
+                <button onclick="clearBoard()">Clear Board</button>
+            </form>
+            <div id="replaceDiv">
+                <input id="replaceWord" placeholder="Word to replace" type="text">
+                <input id="replaceWordWith" placeholder="Word to replace with" type="text">
+                <button onclick="replaceWordFunction()">Replace</button>
+            </div>
+        </div>
+    </div>
+    <div id="boxForTheTable"></div>
+</body>
+</html>
