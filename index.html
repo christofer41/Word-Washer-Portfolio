@@ -12,14 +12,15 @@
 <body>
     <div id="header">
         <div id="settings">
-            <form id="theForm" enctype="multipart/form-data">
+            <div id="theForm" enctype="multipart/form-data">
                 <input onclick="clearBoard()" id="upload" type=file accept=".tsv" name="files[]" size=30>
                 <button onclick="clearBoard()">Clear Board</button>
-            </form>
+            </div>
             <div id="replaceDiv">
                 <input id="replaceWord" placeholder="Word to replace" type="text">
                 <input id="replaceWordWith" placeholder="Word to replace with" type="text">
                 <button onclick="replaceWordFunction()">Replace</button>
+                <button onclick="removeWordFunction()">Remove</button>
             </div>
         </div>
     </div>

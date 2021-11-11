@@ -4,6 +4,7 @@ let replaceList = [
   },
 ];
 
+let saveTheFile;
 
 function handleFileSelect(evt) {
 
@@ -12,6 +13,16 @@ function handleFileSelect(evt) {
 
   // use the first file from the list
   f = files[0];
+
+  saveTheFile = f;
+
+  PrintTheList(f);
+}
+
+
+
+
+function PrintTheList(f) {
 
   var reader = new FileReader();
 
@@ -65,10 +76,10 @@ function handleFileSelect(evt) {
       if (data == null)
         return;
 
-      filename = "washed.csv";
+      filename = "washed.tsv";
 
-      if (!data.match(/^data:text\/csv/i)) {
-        data = 'data:text/csv;charset=utf-8,' + data;
+      if (!data.match(/^data:text\/tsv/i)) {
+        data = 'data:text/tsv;charset=utf-8,' + data;
       }
       data = encodeURI(data);
 
@@ -88,7 +99,20 @@ function handleFileSelect(evt) {
   })(f);
   // Read in the image file as a data URL.
   reader.readAsText(f);
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 function checkText(data) {
   
@@ -190,11 +214,49 @@ function replaceWordFunction() {
     )
   }
 //We log out the array to check that it worked
+
+
 console.log(replaceList)
+
+clearBoard();
+PrintTheList(saveTheFile);
 }
 
+
+
+function removeWordFunction() {
+
+  //The word that will be replaced, followed by the word that is replacing it
+  const replaceWord = document.getElementById("replaceWord").value;
+  const replaceWordWith = "";
+
+  document.getElementById("replaceWord").value = "";
+
+
+  //If the user has typed in a word to be replaced
+  if (replaceWord !== "" && replaceWord !== null) {
+    //We add the word to the array
+    replaceList.push(
+      {
+        word: replaceWord,
+        replace: replaceWordWith
+      }
+    )
+  }
+//We log out the array to check that it worked
+console.log(replaceList)
+
+clearBoard();
+PrintTheList(saveTheFile);
+}
+
+
+
+
 function clearBoard(event) {
-  event.preventDefault();
+  // event.preventDefault();
+
+  console.log("Hello?")
   
   let theBody = document.getElementById("boxForTheTable");
   let settings = document.getElementById("theForm");
